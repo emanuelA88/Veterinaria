@@ -4,50 +4,40 @@ package clinicaveterinaria;
 public class Cliente {
 
     
-    private int id = -1;
-    private String dni;
-    private String apellido;
+    private int idCliente = -1;
     private String nombre;
+    private String apellido;
+    private String dni;
     private String direccion;
     private String telefono;
     private String personaAlternativa;
     
-    public Cliente(int id, String dni, String apellido, String nombre, String direccion, String telefono, String personaAlternativa) {
-        this.id = id;
-        this.dni = dni;
-        this.apellido = apellido;
+    public Cliente(String nombre, String apellido, String dni, String direccion, String telefono, String personaAlternativa) {
         this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
         this.direccion = direccion;
         this.telefono = telefono;
         this.personaAlternativa = personaAlternativa;
     }
-  
-    public Cliente(String dni, String apellido, String nombre, String telefono) {
-        this.id = -1;
-        this.dni = dni;
-        this.apellido = apellido;
+
+    public Cliente(){
+    }
+    
+    public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int id) {
+        this.idCliente = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
-        this.telefono = telefono;
-    }
-    
-    public Cliente (){
-        this.id = -1;
-    }
-    
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
     }
 
     public String getApellido() {
@@ -58,12 +48,12 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getDni() {
+        return dni;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public String getDireccion() {
@@ -88,6 +78,5 @@ public class Cliente {
 
     public void setPersonaAlternativa(String personaAlternativa) {
         this.personaAlternativa = personaAlternativa;
-    }
-    
+    }    
 }

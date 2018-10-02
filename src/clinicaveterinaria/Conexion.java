@@ -17,14 +17,11 @@ public class Conexion {
         this.usuario = usuario;
         this.password = password;
 
-        //Cargamos las clases de mariadb que implementan JDBC
         Class.forName("org.mariadb.jdbc.Driver");
-
     }
     
     public Connection getConexion() throws SQLException{
         if(conexion == null){
-                    // Setup the connection with the DB
             conexion = DriverManager
                 .getConnection(url + "?useLegacyDatetimeCode=false&serverTimezone=UTC"
                         + "&user=" + usuario + "&password=" + password);
